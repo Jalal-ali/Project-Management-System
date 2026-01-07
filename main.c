@@ -47,7 +47,7 @@ void readStudents() {
         return;
     }
 
-    printf("\n====================================\n");
+    printf("====================================\n");
     printf("           ALL PROJECTS\n");
     printf("====================================\n");
 
@@ -119,10 +119,14 @@ int main() {
     int choice;
 
     while (1) {
-        printf("\n--- SIMPLE CRUD SYSTEM ---\n");
+    	//printf("\n====================================\n");
+   		printf("\n    SIMPLE CRUD SYSTEM    \n");
+    	printf("====================================\n");
         printf("1. Create\n2. Read\n3. Update\n4. Delete\n5. Exit\n");
+         printf("====================================\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
+        //printf("====================================\n");
 
         switch (choice) {
             case 1: createProject(); break;
