@@ -55,20 +55,20 @@ void readStudents() {
 
         // printf("Project No %d:", i+1);
 
-        printf("\n%d) Project ID   : %d\n", i + 1, db[i].id);
-        printf("Project Name: %s\n", db[i].name);
-        printf("Description: %s\n", db[i].description);
+        printf("\n%d)\tProject ID   : %d\n", i + 1, db[i].id);
+        printf("\tProject Name: %s\n", db[i].name);
+        printf("\tDescription: %s\n", db[i].description);
         if(db[i].priority == 1){
-        printf("Project's Priority: Low");
+        printf("\tProject's Priority: Low");
         }
         else if(db[i].priority == 2){
-        printf("  Project's Priority: Medium");
+        printf("\tProject's Priority: Medium");
         }
         else{
-        printf("Project's Priority: High");
+        printf("\tProject's Priority: High");
         }
 		 printf("\n====================================\n");
-        printf("\n");
+
         // printf("Project's Priority: %d\n", db[i].priority);
     }
 }
