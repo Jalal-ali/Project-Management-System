@@ -5,7 +5,8 @@
 struct Student {
     int id;
     char name[50],
-    description[50] ;   
+    description[50],
+    priorityVal[30] ;   
     
     int age , priority;
 };
@@ -44,10 +45,25 @@ void readStudents() {
         return;
     }
 
+    printf("--- ALL PROJECTS --- \n");
     for (int i = 0; i < count; i++) {
-        printf("\nID: %d\n", db[i].id);
-        printf("Name: %s\n", db[i].name);
-        printf("Age: %d\n", db[i].age);
+
+        // printf("Project No %d:", i+1);
+        printf("\n%d. Project ID: %d\n", i+1 , db[i].id);
+        printf("Project Name: %s\n", db[i].name);
+        printf("Description: %s\n", db[i].description);
+        if(db[i].priority == 1){
+        printf("Project's Priority: Low");
+        }
+        else if(db[i].priority == 2){
+        printf("Project's Priority: Medium");
+        }
+        else{
+        printf("Project's Priority: High");
+        }
+
+        printf("\n");
+        // printf("Project's Priority: %d\n", db[i].priority);
     }
 }
 
