@@ -41,39 +41,27 @@ void createProject() {
 // READ
 void readStudents() {
     if (count == 0) {
-        printf("\n====================================\n");
-        printf("        No projects found.\n");
-        printf("====================================\n");
+        printf("No projects found.\n");
         return;
     }
 
-    printf("\n====================================\n");
-    printf("           ALL PROJECTS\n");
-    printf("====================================\n");
+    printf("\nAll Projects:\n");
 
     for (int i = 0; i < count; i++) {
+        printf("\n%d) Project ID   : %d", i + 1, db[i].id);
+        printf("\n   Name         : %s", db[i].name);
+        printf("\n   Description  : %s", db[i].description);
 
-        printf("\n------------------------------------\n");
-        printf(" Project #%d\n", i + 1);
-        printf("------------------------------------\n");
+        printf("\n   Priority     : ");
+        if (db[i].priority == 1)
+            printf("Low");
+        else if (db[i].priority == 2)
+            printf("Medium");
+        else
+            printf("High");
 
-        printf(" ID          : %d\n", db[i].id);
-        printf(" Name        : %s\n", db[i].name);
-        printf(" Description : %s\n", db[i].description);
-
-        printf(" Priority    : ");
-        if (db[i].priority == 1) {
-            printf("Low 🟢\n");
-        } 
-        else if (db[i].priority == 2) {
-            printf("Medium 🟡\n");
-        } 
-        else {
-            printf("High 🔴\n");
-        }
+        printf("\n");
     }
-
-    printf("\n====================================\n");
 }
 
 
