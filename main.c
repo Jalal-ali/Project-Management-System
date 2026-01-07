@@ -41,31 +41,41 @@ void createProject() {
 // READ
 void readStudents() {
     if (count == 0) {
-        printf("No records found.\n");
+        printf("\n====================================\n");
+        printf("        No projects found.\n");
+        printf("====================================\n");
         return;
     }
 
-    printf("--- ALL PROJECTS --- \n");
+    printf("\n====================================\n");
+    printf("           ALL PROJECTS\n");
+    printf("====================================\n");
+
     for (int i = 0; i < count; i++) {
 
-        // printf("Project No %d:", i+1);
-        printf("\n%d. Project ID: %d\n", i+1 , db[i].id);
-        printf("Project Name: %s\n", db[i].name);
-        printf("Description: %s\n", db[i].description);
-        if(db[i].priority == 1){
-        printf("Project's Priority: Low");
-        }
-        else if(db[i].priority == 2){
-        printf("Project's Priority: Medium");
-        }
-        else{
-        printf("Project's Priority: High");
-        }
+        printf("\n------------------------------------\n");
+        printf(" Project #%d\n", i + 1);
+        printf("------------------------------------\n");
 
-        printf("\n");
-        // printf("Project's Priority: %d\n", db[i].priority);
+        printf(" ID          : %d\n", db[i].id);
+        printf(" Name        : %s\n", db[i].name);
+        printf(" Description : %s\n", db[i].description);
+
+        printf(" Priority    : ");
+        if (db[i].priority == 1) {
+            printf("Low 🟢\n");
+        } 
+        else if (db[i].priority == 2) {
+            printf("Medium 🟡\n");
+        } 
+        else {
+            printf("High 🔴\n");
+        }
     }
+
+    printf("\n====================================\n");
 }
+
 
 // UPDATE
 void updateStudent() {
