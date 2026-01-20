@@ -66,7 +66,7 @@ void readStudents()
         return;
     }
 
-    printf("\n====================================\n");
+    printf("====================================\n");
     printf("           ALL PROJECTS\n");
     printf("====================================\n");
     //      0 chota hai 3 se
@@ -171,6 +171,7 @@ int main()
         printf("1. Add new project\n2. Show all projects \n3. Update a project\n4. Delete a project\n5. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
+        //printf("====================================\n");
 
         switch (choice)
         {
