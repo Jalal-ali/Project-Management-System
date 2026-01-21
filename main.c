@@ -92,7 +92,6 @@ void readStudents()
         }
         printf("\n-------------------------------------------\n");
 
-        // printf("Project's Priority: %d\n", db[i].priority);
     }
 }
 
