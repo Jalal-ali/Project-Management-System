@@ -139,7 +139,7 @@ void updateStudent()
 void deleteStudent()
 {
     int id;
-    printf("Enter ID to delete: ");
+    printf("Enter Project ID to delete: ");
     scanf("%d", &id);
 
     for (int i = 0; i < count; i++)
@@ -152,11 +152,11 @@ void deleteStudent()
             }
             count--;
 
-            printf("Record deleted!\n");
+            printf("Project deleted!\n");
             return;
         }
     }
-    printf("Student not found.\n");
+    printf("Project not found.\n");
 }
 
 // STEP 5: MENU AND MAIN LOOP
